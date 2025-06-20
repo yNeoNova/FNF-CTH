@@ -1,0 +1,67 @@
+{
+  "CharAnims": [
+    {
+      "AnimPosOffset": [0, 0],
+      "isLooped": true,
+      "AnimFPS": 24,
+      "AnimTag": "idle Left",
+      "AnimIndices": [],
+      "AnimInXML": "BF idle LEFT",
+      "flip_x": false,
+      "flip_y": false
+    },
+    {
+      "AnimPosOffset": [0, 0],
+      "isLooped": true,
+      "AnimFPS": 24,
+      "AnimTag": "idle Right",
+      "AnimIndices": [],
+      "AnimInXML": "BF idle RIGHT",
+      "flip_x": false,
+      "flip_y": false
+    },
+    {
+      "AnimPosOffset": [0, 0],
+      "isLooped": true,
+      "AnimFPS": 24,
+      "AnimTag": "Walk Left",
+      "AnimIndices": [],
+      "AnimInXML": "BF Walk LEFT",
+      "flip_x": false,
+      "flip_y": false
+    },
+    {
+      "AnimPosOffset": [0, 0],
+      "isLooped": true,
+      "AnimFPS": 24,
+      "AnimTag": "Walk Right",
+      "AnimIndices": [],
+      "AnimInXML": "BF Walk RIGHT",
+      "flip_x": false,
+      "flip_y": false
+    },
+    {
+      "AnimPosOffset": [0, 0],
+      "isLooped": false,
+      "AnimFPS": 24,
+      "AnimTag": "uhh",
+      "AnimIndices": [],
+      "AnimInXML": "uhh",
+      "flip_x": false,
+      "flip_y": false
+    }
+  ],
+
+  "CharInfo": {
+    "antialiasing": false,
+    "image_path": "chars/BF",
+    "position": [0, 0],
+    "char_icon": "bf",
+    "flip_x": false,
+    "flip_y": false,
+    "camera_pos": [0, 0],
+    "sing_duration": 4,
+    "char_scale": 1
+  }
+}
+//Based on Syncra Engine Char json file
