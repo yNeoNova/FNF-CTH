@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+
+    <!-- Project Name -->
+    <meta title="FNF - Catch The Notes" package="com.leo.fnfcatchthenotes" version="1.0.0" company="leo" />
+
+    <!-- App Icon -->
+    <icon path="icon/android/icon500.png" />
+
+    <!-- Android target ONLY -->
+    <app main="Main" file="FNF-CN" path="export" />
+
+    <!-- Window settings -->
+    <window width="500" height="500" fps="60" background="#000000" />
+
+    <!-- Haxe and libraries -->
+    <haxelib name="lime" />
+    <haxelib name="openfl" />
+    <haxelib name="flixel" />
+    <haxelib name="flixel-addons" />
+    <haxelib name="flixel-ui" />
+    <haxelib name="hxdiscord_rpc" />
+    <haxelib name="tjson" />
+    <haxelib name="hxcpp" />
+
+    <!-- Assets -->
+    <assets path="assets" rename="assets" />
+    <assets path="assets/charsOffsets" rename="charsOffsets" />
+    <assets path="icon" rename="icon" />
+
+    <!-- Android only -->
+    <target name="android" />
+
+</project>
