@@ -1,0 +1,43 @@
+name: Android Build & Release
+
+on:
+  push:
+    tags:
+      - 'v*'   # Runs on version tags like v1.0.0, etc.
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 8
+
+      - name: Setup Haxe
+        uses: krdlab/setup-haxe@v1
+        with:
+          haxe-version: 4.2.5
+
+      - name: Setup Android SDK/NDK
+        run: haxelib run lime setup android
+
+      - name: Build 64-bit APK
+        run: bash setup/compiling/android/android_x64_build.sh
+
+      - name: Build 32-bit APK
+        run: bash setup/compiling/android/android_x32_build.sh
+
+      - name: Upload APKs to GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            export/android/bin/app/build/outputs/apk/release/*.apk
+
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
