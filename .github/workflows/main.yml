@@ -3,7 +3,7 @@ name: Android Build & Release
 on:
   push:
     tags:
-      - 'v*'   # Runs on version tags like v1.0.0, etc.
+      - 'v*'   # Runs on version tags like v1.0.0, etc yez.
 
 jobs:
   build:
