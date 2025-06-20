@@ -3,7 +3,7 @@ name: Android Build & Release
 on:
   push:
     tags:
-      - 'v*'   # Runs on version tags like v1.0.0, etc yez.
+      - 'v*'
 
 jobs:
   build:
@@ -24,20 +24,20 @@ jobs:
         with:
           haxe-version: 4.2.5
 
-      - name: Setup Android SDK/NDK
-        run: haxelib run lime setup android
-
-      - name: Build 64-bit APK
+      - name: Run 64-bit Build Script
         run: bash setup/compiling/android/android_x64_build.sh
 
-      - name: Build 32-bit APK
+      - name: Run 32-bit Build Script
         run: bash setup/compiling/android/android_x32_build.sh
 
       - name: Upload APKs to GitHub Release
         uses: softprops/action-gh-release@v2
         with:
+          name: "FNF - CATCH THE NOTES: DEMO"
+          tag_name: ${{ github.ref_name }}
+          body: "An demo for the main build of FNF-CN"
           files: |
-            export/android/bin/app/build/outputs/apk/release/*.apk
-
+            export/android/bin/Build32.apk
+            export/android/bin/Build64.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
