@@ -3,7 +3,8 @@ name: Android Build & Release
 on:
   push:
     tags:
-      - 'v*'
+      - '*'       # triggers on ANY tag name now
+  workflow_dispatch: # allows manual run from GitHub UI
 
 jobs:
   build:
